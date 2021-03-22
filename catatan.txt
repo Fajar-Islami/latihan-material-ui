@@ -1,0 +1,14 @@
+Material UI net ninja
+
+////////////////Video 1
+Material UI adalah UI Library component untuk react
+https://material-ui.com/getting-started/installation/
+
+////////////////Video 2
+di typography pakai nowrap supaya text gk muncul semua
+
+textPrimary warna hitam
+textSecondary warna abu2
+
+////////////////Video 3 button
+ButtonGroup = wrapper untuk button
