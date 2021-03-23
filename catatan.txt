@@ -44,3 +44,17 @@ tarok di index.css
 
 
 ////////////////Video 7
+noValidate = supaya tidak ada validate dri browser (built-in dari browser)
+
+
+////////////////Video 8 radio buttons
+radio grup = agar hanya bisa pilih 1 radio
+
+FormLabel = 
+FormControl = wrapper label
+
+////////////////Video 9 json server
+npm install -g json-server
+
+untuk bisa akses server nya jalankan
+json-server --watch data/db.json --port 8000
