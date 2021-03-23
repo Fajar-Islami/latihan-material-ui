@@ -12,3 +12,35 @@ textSecondary warna abu2
 
 ////////////////Video 3 button
 ButtonGroup = wrapper untuk button
+
+////////////////Video 4 Icon
+npm install @material-ui/icons
+
+////////////////Video 5  makeStyle
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  btn: {
+    fontSize: 60,
+    backgroundColor: "violet",
+    "&:hover": {
+      backgroundColor: "blue",
+    },
+  },
+  title: {
+    textDecoration: "underline",
+    marginBlockStart: 20,
+  },
+});
+
+////////////////Video 6 custom theme
+https://material-ui.com/customization/default-theme/#default-theme
+https://material-ui.com/customization/color/#color
+
+kalau custom menggunakan color dari material otomatis untuk light,dark dan main
+
+import font dari google (pakai yang import @)
+tarok di index.css 
+
+
+////////////////Video 7
