@@ -4,7 +4,10 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import KeyboardArrowRightOutlinedIcon from "@material-ui/icons/KeyboardArrowRightOutlined";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core";
+import { FormControlLabel, makeStyles, RadioGroup } from "@material-ui/core";
+import Radio from "@material-ui/core/Radio";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
 
 const useStyles = makeStyles({
   field: {
@@ -22,6 +25,7 @@ export default function Create() {
 
   const [titleError, settitleError] = useState(false);
   const [detailsError, setdetailsError] = useState(false);
+  const [category, setCategory] = useState("todos");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,7 +41,7 @@ export default function Create() {
 
     // Hanya ketika diisi
     if (title && details) {
-      console.log(title, details);
+      console.log(title, details, category);
     }
   };
 
@@ -70,6 +74,16 @@ export default function Create() {
           rows={4}
           error={detailsError}
         />
+
+        <FormControl className={classes.field}>
+          <FormLabel>Note Category</FormLabel>
+          <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
+            <FormControlLabel control={<Radio />} value='money' label='Money' />
+            <FormControlLabel control={<Radio />} value='todos' label='Todos' />
+            <FormControlLabel control={<Radio />} value='reminders' label='reminders' />
+            <FormControlLabel control={<Radio />} value='work' label='work' />
+          </RadioGroup>
+        </FormControl>
 
         <Button type='submit' color='secondary' variant='contained' endIcon={<KeyboardArrowRightOutlinedIcon />}>
           Submit
